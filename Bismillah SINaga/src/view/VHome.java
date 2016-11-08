@@ -26,6 +26,18 @@ public class VHome extends javax.swing.JFrame {
         this.BCektanaman.addActionListener(a);
     
     }
+    public void panen_action(ActionListener a){
+        this.BPanen.addActionListener(a);
+    
+    }
+    public void cekpupuk_action(ActionListener a){
+        this.BCekPupuk.addActionListener(a);
+    
+    }
+    public void lapjual_action(ActionListener a){
+        this.BLaporanpenjualan.addActionListener(a);
+    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

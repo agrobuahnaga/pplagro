@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Danu
@@ -16,6 +18,13 @@ public class VPenanaman1 extends javax.swing.JFrame {
      */
     public VPenanaman1() {
         initComponents();
+    }
+    public void simpan_action(ActionListener a){
+        this.BSimpan.addActionListener(a);
+    }
+    
+    public void back_action(ActionListener a){
+        this.BBack.addActionListener(a);
     }
 
     /**
@@ -34,7 +43,7 @@ public class VPenanaman1 extends javax.swing.JFrame {
         Lokasitanam = new javax.swing.JTextArea();
         Jenisbuahnaga = new javax.swing.JComboBox();
         Jenislahan = new javax.swing.JComboBox();
-        jButton1 = new javax.swing.JButton();
+        BSimpan = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -42,6 +51,7 @@ public class VPenanaman1 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Lebarlahan = new javax.swing.JTextField();
+        BBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,8 +69,8 @@ public class VPenanaman1 extends javax.swing.JFrame {
 
         Jenislahan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Datar", "Terasering", " " }));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Simpan");
+        BSimpan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BSimpan.setText("Simpan");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Panjang Lahan");
@@ -86,45 +96,50 @@ public class VPenanaman1 extends javax.swing.JFrame {
             }
         });
 
+        BBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BBack.setText("Simpan");
+
         javax.swing.GroupLayout backgroundPenanaman1Layout = new javax.swing.GroupLayout(backgroundPenanaman1);
         backgroundPenanaman1.setLayout(backgroundPenanaman1Layout);
         backgroundPenanaman1Layout.setHorizontalGroup(
             backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPenanaman1Layout.createSequentialGroup()
-                .addGap(94, 94, 94)
+            .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
+                .addGap(96, 96, 96)
                 .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
-                            .addComponent(jLabel6)
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
-                            .addComponent(Lebarlahan)
-                            .addGap(433, 433, 433)))
+                    .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
+                        .addComponent(BBack, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
+                        .addComponent(Lebarlahan)
+                        .addGap(431, 431, 431))
                     .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
                         .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1)
-                                .addComponent(Panjanglahan)
-                                .addComponent(Tanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3))
-                        .addGap(174, 174, 174)
-                        .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(Jenislahan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Jenisbuahnaga, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
-                                    .addGap(39, 39, 39)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(89, 89, 89))))
+                            .addComponent(jLabel6)
+                            .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
+                                .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jScrollPane1)
+                                        .addComponent(Panjanglahan)
+                                        .addComponent(Tanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel3))
+                                .addGap(174, 174, 174)
+                                .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel4)
+                                    .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(Jenislahan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Jenisbuahnaga, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
+                                            .addGap(39, 39, 39)
+                                            .addComponent(BSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addContainerGap(87, Short.MAX_VALUE))))
         );
         backgroundPenanaman1Layout.setVerticalGroup(
             backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPenanaman1Layout.createSequentialGroup()
-                .addContainerGap(165, Short.MAX_VALUE)
+                .addContainerGap(155, Short.MAX_VALUE)
                 .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPenanaman1Layout.createSequentialGroup()
                         .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,13 +166,15 @@ public class VPenanaman1 extends javax.swing.JFrame {
                 .addGroup(backgroundPenanaman1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundPenanaman1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(127, 127, 127))
+                        .addComponent(BSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPenanaman1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(BBack, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,6 +235,8 @@ public class VPenanaman1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BBack;
+    private javax.swing.JButton BSimpan;
     private javax.swing.JComboBox Jenisbuahnaga;
     private javax.swing.JComboBox Jenislahan;
     private javax.swing.JTextField Lebarlahan;
@@ -225,7 +244,6 @@ public class VPenanaman1 extends javax.swing.JFrame {
     private javax.swing.JTextField Panjanglahan;
     private com.toedter.calendar.JDateChooser Tanggal;
     private komponenTambahan.BackgroundPenanaman backgroundPenanaman1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

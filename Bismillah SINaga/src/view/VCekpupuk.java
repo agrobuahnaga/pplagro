@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Danu
@@ -16,6 +18,12 @@ public class VCekpupuk extends javax.swing.JFrame {
      */
     public VCekpupuk() {
         initComponents();
+    }
+    public void back_action(ActionListener a){
+        this.BBack.addActionListener(a);
+    }
+    public void cek_action(ActionListener a){
+        this.BCek.addActionListener(a);
     }
 
     /**

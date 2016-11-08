@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Danu
@@ -16,6 +18,9 @@ public class VCekpupuk1 extends javax.swing.JFrame {
      */
     public VCekpupuk1() {
         initComponents();
+    }
+    public void back_action(ActionListener a){
+        this.BBack.addActionListener(a);
     }
 
     /**
@@ -44,6 +49,7 @@ public class VCekpupuk1 extends javax.swing.JFrame {
         Jcektanah3 = new javax.swing.JTextField();
         Jcektanah4 = new javax.swing.JTextField();
         BCetak = new javax.swing.JButton();
+        BBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -145,13 +151,22 @@ public class VCekpupuk1 extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
+        BBack.setText("Kembali");
+        BBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout backgroundCekpupuk1Layout = new javax.swing.GroupLayout(backgroundCekpupuk1);
         backgroundCekpupuk1.setLayout(backgroundCekpupuk1Layout);
         backgroundCekpupuk1Layout.setHorizontalGroup(
             backgroundCekpupuk1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundCekpupuk1Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(backgroundCekpupuk1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BBack)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         backgroundCekpupuk1Layout.setVerticalGroup(
@@ -159,7 +174,9 @@ public class VCekpupuk1 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundCekpupuk1Layout.createSequentialGroup()
                 .addContainerGap(166, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141))
+                .addGap(18, 18, 18)
+                .addComponent(BBack)
+                .addGap(100, 100, 100))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,6 +196,10 @@ public class VCekpupuk1 extends javax.swing.JFrame {
     private void BCetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCetakActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BCetakActionPerformed
+
+    private void BBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,6 +237,7 @@ public class VCekpupuk1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BBack;
     private javax.swing.JButton BCetak;
     private javax.swing.JLabel JTiang;
     private javax.swing.JLabel Jbibit;

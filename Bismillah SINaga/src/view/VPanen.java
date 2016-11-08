@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Danu
@@ -16,6 +18,9 @@ public class VPanen extends javax.swing.JFrame {
      */
     public VPanen() {
         initComponents();
+    }
+    public void back_action(ActionListener a){
+        this.BBack.addActionListener(a);
     }
 
     /**
@@ -65,6 +70,7 @@ public class VPanen extends javax.swing.JFrame {
         Hasil = new javax.swing.JTextField();
         BLihat = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        BBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -341,6 +347,9 @@ public class VPanen extends javax.swing.JFrame {
 
         backgroundPanen1.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 600, 320));
 
+        BBack.setText("Kembali");
+        backgroundPanen1.add(BBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -391,6 +400,7 @@ public class VPanen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BBack;
     private javax.swing.JButton BLihat;
     private javax.swing.JButton BLihat1;
     private javax.swing.JButton BLihat2;
